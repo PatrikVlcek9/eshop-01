@@ -1,0 +1,20 @@
+.content-wrapper {
+    display: flex;
+    justify-content: space-between; /* Rozdělí filtrační panel a karty přes celou šířku */
+    align-items: flex-start;
+    max-width: 1200px; /* Šířka odpovídá hranám carouselu */
+    margin: 0 auto; /* Zajistí zarovnání na střed stránky */
+  }
+
+  .filter-panel {
+    flex: 0 0 22%; /* Filtrační panel zabere 22 % šířky místo 20 % */
+  }
+
+  .product-container {
+    flex: 0 0 75%; /* Produktové karty zůstanou na 75 % šířky */
+  }
+
+  .product-card {
+    max-width: 100%; /* Karty se přizpůsobí šířce */
+  }
+

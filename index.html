@@ -25,6 +25,27 @@
             height: 400px;
             object-fit: cover;
         }
+
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Rozestupy mezi panelem a produkty */
+            max-width: 1200px; /* Maximální šířka obsahu */
+            margin: 0 auto;
+        }
+
+        .filter-panel {
+            width: 350px; /* Zvýšená šířka filtračního panelu */
+            flex-shrink: 0; /* Zabrání zmenšení šířky panelu */
+        }
+
+        .product-container {
+            flex: 1; /* Zajištění přizpůsobení produktového prostoru */
+        }
+
+        .product-card {
+            max-width: 100%; /* Karty zůstanou přizpůsobené prostoru */
+        }
     </style>
 </head>
 <body>
@@ -38,48 +59,28 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">AI</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Mobilní zařízení</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">TV & Audio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Domácí spotřebiče</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">IT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Příslušenství</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">SmartThings</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">AI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Mobilní zařízení</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">TV & Audio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Domácí spotřebiče</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">IT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Příslušenství</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">SmartThings</a></li>
                 </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Podpora</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pro firmy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-cart"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-person"></i></a>
-                    </li>
-                </ul>
+                <!-- Dropdown košík -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="cartDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Košík" width="25" height="25">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdown">
+                        <li><span class="dropdown-item">Samsung Galaxy A55 - 9 990,-</span></li>
+                        <li><span class="dropdown-item">Samsung Galaxy S24+ - 22 990,-</span></li>
+                        <li><span class="dropdown-item">Samsung Galaxy S24 - 23 490,-</span></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-center fw-bold" href="#">Zobrazit košík</a></li>
+                    </ul>
+                </li>
             </div>
         </div>
     </nav>
@@ -110,6 +111,157 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+    </div>
+
+    <!-- Content -->
+    <div class="container-fluid py-4">
+        <div class="content-wrapper">
+            <!-- Filtrační panel -->
+            <div class="filter-panel">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Filtry</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label for="storeLocation" class="form-label">Dostupnost na prodejně</label>
+                                <select id="storeLocation" class="form-select">
+                                    <option>Ostrava</option>
+                                    <option>Praha</option>
+                                    <option>Brno</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="priceRange" class="form-label">Cenový rozsah</label>
+                                <input type="range" class="form-range" id="priceRange">
+                            </div>
+                            <div class="mb-3">
+                                <label for="category" class="form-label">Kategorie</label>
+                                <select id="category" class="form-select">
+                                    <option>Telefony</option>
+                                    <option>Televize</option>
+                                    <option>Počítače</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Použít filtry</button>
+                         <!-- Cena -->
+                         <div class="mb-3">
+                            <label for="priceRange" class="form-label">Cena s DPH</label>
+                            <div class="d-flex gap-2">
+                                <input type="number" id="priceMin" class="form-control" placeholder="0">
+                                <input type="number" id="priceMax" class="form-control" placeholder="59000">
+                            </div>
+                        </div>
+                        <!-- Stav zboží -->
+                        <div class="mb-3">
+                            <label class="form-label">Stav zboží</label>
+                            <div class="form-check">
+                                <input type="checkbox" id="new" class="form-check-input">
+                                <label for="new" class="form-check-label">Nové</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="used" class="form-check-input">
+                                <label for="used" class="form-check-label">Bazar</label>
+                            </div>
+                        </div>
+                        <!-- Rozlišení displeje -->
+                        <div class="mb-3">
+                            <label for="displayResolution" class="form-label">Rozlišení displeje</label>
+                            <select id="displayResolution" class="form-select">
+                                <option>Full HD+ (1080x2400)</option>
+                                <option>Quad HD+ (1440x3200)</option>
+                                <option>UHD+ (2160x3840)</option>
+                            </select>
+                        </div>
+                        <!-- Kapacita baterie -->
+                        <div class="mb-3">
+                            <label for="batteryCapacity" class="form-label">Kapacita baterie (mAh)</label>
+                            <input type="number" id="batteryCapacity" class="form-control" placeholder="3000">
+                        </div>
+                        <!-- Procesor -->
+                        <div class="mb-3">
+                            <label for="processor" class="form-label">Procesor</label>
+                            <select id="processor" class="form-select">
+                                <option>Snapdragon 8 Gen 2</option>
+                                <option>Exynos 2200</option>
+                                <option>Apple A17 Pro</option>
+                            </select>
+                        </div>
+                        <!-- Operační paměť (RAM) -->
+                        <div class="mb-3">
+                            <label for="ram" class="form-label">Operační paměť (RAM)</label>
+                            <input type="number" id="ram" class="form-control" placeholder="8">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+            <!-- Produktové karty -->
+            <div class="product-container">
+                <div class="row row-cols-1 row-cols-md-3 g-3">
+                    <div class="col product-card">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung Galaxy S23</h5>
+                                <p class="card-text">Nejlepší výkon a kvalita.</p>
+                                <p class="text-danger fw-bold">19 990,-</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col product-card">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung QLED TV</h5>
+                                <p class="card-text">Perfektní obraz a zvuk.</p>
+                                <p class="text-danger fw-bold">25 490,-</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col product-card">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung Notebook 9</h5>
+                                <p class="card-text">Lehký a výkonný notebook.</p>
+                                <p class="text-danger fw-bold">30 990,-</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col product-card">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung QLED TV</h5>
+                                <p class="card-text">Perfektní obraz a zvuk.</p>
+                                <p class="text-danger fw-bold">25 490,-</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col product-card">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung QLED TV</h5>
+                                <p class="card-text">Perfektní obraz a zvuk.</p>
+                                <p class="text-danger fw-bold">25 490,-</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col product-card">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Samsung QLED TV</h5>
+                                <p class="card-text">Perfektní obraz a zvuk.</p>
+                                <p class="text-danger fw-bold">25 490,-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
