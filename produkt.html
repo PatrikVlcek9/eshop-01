@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail produktu</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SAMSUNG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">AI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Mobilní zařízení</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">TV & Audio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Domácí spotřebiče</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">IT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Příslušenství</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">SmartThings</a></li>
+                </ul>
+                <!-- Dropdown košík -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="cartDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Košík" width="25"
+                            height="25">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdown">
+                        <li><span class="dropdown-item">Samsung Galaxy A55 - 9 990,-</span></li>
+                        <li><span class="dropdown-item">Samsung Galaxy S24+ - 22 990,-</span></li>
+                        <li><span class="dropdown-item">Samsung Galaxy S24 - 23 490,-</span></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-center fw-bold" href="#">Zobrazit košík</a></li>
+                    </ul>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+  <div class="container mt-5">
+    <!-- Detail produktu -->
+    <div class="row">
+      <!-- Hlavní obrázek a galerie (Carousel) -->
+      <div class="col-md-6">
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://static.onlineshop.cz/data/eshop_online/product/d/226/1128564/mobilni-telefon-apple-iphone-14-pro-128-gb-deep-purple.jpg" class="d-block w-100" alt="Hlavní obrázek">
+            </div>
+            <div class="carousel-item">
+              <img src="https://static.onlineshop.cz/data/eshop_online/product/d/226/1128564/mobilni-telefon-apple-iphone-14-pro-128-gb-deep-purple.jpg" class="d-block w-100" alt="Obrázek 2">
+            </div>
+            <div class="carousel-item">
+              <img src="https://static.onlineshop.cz/data/eshop_online/product/d/226/1128564/mobilni-telefon-apple-iphone-14-pro-128-gb-deep-purple.jpg" class="d-block w-100" alt="Obrázek 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Předchozí</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Další</span>
+          </button>
+        </div>
+      </div>
+      <!-- Informace o produktu -->
+      <div class="col-md-6">
+        <h1 class="display-5">Samsung Galaxy S23</h1>
+        <p class="text-muted">Mobilní telefon, 128 GB</p>
+        <h2 class="text-success">19,999 Kč</h2>
+        <p class="mt-4">
+          <strong>Krátký popis:</strong> Kompaktní a výkonný smartphone s nejnovějšími funkcemi a elegantním designem.
+        </p>
+        <p>
+          <strong>Dlouhý popis:</strong> Samsung Galaxy S23 je vybaven špičkovým procesorem Snapdragon 8 Gen 2, nabízí vynikající fotoaparát a dlouhou výdrž baterie. S Dynamic AMOLED displejem je zážitek z používání smartphonu zcela jedinečný.
+        </p>
+        <!-- Parametry produktu -->
+        <h4 class="mt-4">Parametry produktu</h4>
+        <ul>
+          <li><strong>Displej:</strong> 6.1" Dynamic AMOLED</li>
+          <li><strong>Kamera:</strong> 50 MP + 12 MP + 10 MP</li>
+          <li><strong>Baterie:</strong> 3900 mAh</li>
+          <li><strong>Procesor:</strong> Snapdragon 8 Gen 2</li>
+          <li><strong>Úložiště:</strong> 128 GB</li>
+        </ul>
+        <!-- Tlačítko přidat do košíku -->
+        <button class="btn btn-primary btn-lg mt-3">
+          Přidat do košíku
+        </button>
+      </div>
+    </div>
+
+    <!-- Hodnocení a recenze -->
+    <div class="mt-5">
+      <h3>Hodnocení</h3>
+      <p class="text-warning fs-4">★★★★☆ (4.5 z 5)</p>
+      <h4>Recenze</h4>
+      <div class="list-group">
+        <div class="list-group-item">
+          <h5>Jan Novák</h5>
+          <p class="text-warning">★★★★★</p>
+          <p>Skvělý telefon, baterie vydrží celý den a displej je nádherný.</p>
+        </div>
+        <div class="list-group-item">
+          <h5>Petra Dvořáková</h5>
+          <p class="text-warning">★★★★☆</p>
+          <p>Výborný výkon, ale chybí mi 3.5mm jack na sluchátka.</p>
+        </div>
+        <div class="list-group-item">
+          <h5>Karel Svoboda</h5>
+          <p class="text-warning">★★★★★</p>
+          <p>Fotoaparát je úžasný! Lepší telefon jsem zatím neměl.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

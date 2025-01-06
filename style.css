@@ -1,20 +1,44 @@
+@media (max-width: 992px) {
+    #carouselExampleIndicators {
+        display: none;
+    }
+}
+
+#carouselExampleIndicators {
+    margin-top: 40px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+}
+
 .content-wrapper {
     display: flex;
-    justify-content: space-between; /* Rozdělí filtrační panel a karty přes celou šířku */
-    align-items: flex-start;
-    max-width: 1200px; /* Šířka odpovídá hranám carouselu */
-    margin: 0 auto; /* Zajistí zarovnání na střed stránky */
-  }
+    justify-content: space-between;
+    gap: 20px; /* Rozestupy mezi panelem a produkty */
+    max-width: 1200px; /* Maximální šířka obsahu */
+    margin: 0 auto;
+}
 
-  .filter-panel {
-    flex: 0 0 22%; /* Filtrační panel zabere 22 % šířky místo 20 % */
-  }
+.filter-panel {
+    width: 250px; /* Zvýšená šířka filtračního panelu */
+    flex-shrink: 0; /* Zabrání zmenšení šířky panelu */
+}
 
-  .product-container {
-    flex: 0 0 75%; /* Produktové karty zůstanou na 75 % šířky */
-  }
+.product-container {
+    flex: 1; /* Zajištění přizpůsobení produktového prostoru */
+}
 
-  .product-card {
-    max-width: 100%; /* Karty se přizpůsobí šířce */
-  }
+.product-card {
+    max-width: 100%; /* Karty zůstanou přizpůsobené prostoru */
+}
 
+ul, li {
+    list-style: none;
+}
