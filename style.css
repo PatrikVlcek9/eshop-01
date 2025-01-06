@@ -2,6 +2,20 @@
     #carouselExampleIndicators {
         display: none;
     }
+
+    .filter-btn {
+        display: block !important;
+        margin-left: 45%;
+    }
+
+    .filter-panel {
+        display: none;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 #carouselExampleIndicators {
