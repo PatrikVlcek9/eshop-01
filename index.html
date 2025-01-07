@@ -15,8 +15,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a href="https://www.samsung.com/cz/" class="nv00-gnb-v3__logo " an-tr="nv00_gnb-microsite-l0-navigation2"
-                an-ca="navigation" an-ac="gnb" an-la="logo" aria-label="Samsung">
+            <a href="https://www.samsung.com/cz/" class="nv00-gnb-v3__logo ms-5"
+                an-tr="nv00_gnb-microsite-l0-navigation2" an-ca="navigation" an-ac="gnb" an-la="logo"
+                aria-label="Samsung">
                 <svg class="icon" focusable="false" aria-hidden="true" width="130" height="29" viewBox="0 0 130 29">
                     <g transform="translate(-250 -7)">
                         <path
@@ -30,18 +31,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link fw-bold" href="#">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold" href="#">AI</a></li>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center">
                     <li class="nav-item"><a class="nav-link fw-bold" href="#">Mobilní zařízení</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold" href="#">TV & Audio</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold" href="#">Domácí spotřebiče</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold" href="#">IT</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold" href="#">Příslušenství</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold" href="#">SmartThings</a></li>
                 </ul>
                 <!-- Dropdown košík -->
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown me-5">
                     <a class="nav-link dropdown-toggle" href="#" id="cartDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Košík" width="25"
@@ -126,7 +124,6 @@
                                     <option>Počítače</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">Použít filtry</button>
                             <!-- Cena -->
                             <div class="mb-3">
                                 <label for="priceRange" class="form-label">Cena s DPH</label>
@@ -224,12 +221,14 @@
                                     <option>IP68</option>
                                     <option>IP54</option>
                                 </select>
+                                <button type="submit" class="btn btn-primary w-100 mt-2">Použít filtry</button>
+
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            
+
 
             <!-- Produktové karty -->
             <div class="product-container">
@@ -241,7 +240,14 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Samsung Galaxy Z Flip 6</h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -253,8 +259,13 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Samsung Galaxy S24 FE</h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
@@ -264,8 +275,13 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Samsung Galaxy A54</h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
@@ -273,10 +289,15 @@
                             <div class="card">
                                 <img src="./images/watchultra.avif" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Galaxy Watch Ultra                                    </h5>
+                                    <h5 class="card-title">Galaxy Watch Ultra </h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
@@ -284,10 +305,15 @@
                             <div class="card">
                                 <img src="./images/Galaxy Watch7 44mm LTE.avif" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Galaxy Watch7 44mm LTE                                    </h5>
+                                    <h5 class="card-title">Galaxy Watch7 44mm LTE </h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
@@ -298,8 +324,13 @@
                                     <h5 class="card-title">Galaxy Watch6 40mm
                                     </h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
@@ -309,8 +340,13 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Galaxy Buds2 Pro</h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
@@ -320,8 +356,13 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Galaxy Buds3 Pro</h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
@@ -331,8 +372,13 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Galaxy Tab S9</h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
@@ -342,8 +388,13 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Galaxy Tab S10 Ultra</h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
@@ -353,8 +404,13 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Galaxy Tab S10+</h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
@@ -364,41 +420,64 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Galaxy SmartTag2</h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
                         <div class="col product-card">
                             <div class="card">
-                                <img src="./images/OLED 4K QE83S90D Série S90D (2024).avif" class="card-img-top" alt="...">
+                                <img src="./images/OLED 4K QE83S90D Série S90D (2024).avif" class="card-img-top"
+                                    alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">83" OLED 4K QE83S90D Série S90D (2024)</h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
                         <div class="col product-card">
                             <div class="card">
-                                <img src="./images/Crystal UHD UE98DU9072 Série DU9072 (2024).webp" class="card-img-top" alt="...">
+                                <img src="./images/Crystal UHD UE98DU9072 Série DU9072 (2024).webp" class="card-img-top"
+                                    alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">98" Crystal UHD UE98DU9072 Série DU9072 (2024)</h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a> <a href="./produkt.html">
                         <div class="col product-card">
                             <div class="card">
-                                <img src="./images/Neo QLED 4K QE98QN90D Série QN90D (2024).avif" class="card-img-top" alt="...">
+                                <img src="./images/Neo QLED 4K QE98QN90D Série QN90D (2024).avif" class="card-img-top"
+                                    alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">98" Neo QLED 4K QE98QN90D Série QN90D (2024)</h5>
                                     <p class="card-text">Nejlepší výkon a kvalita.</p>
-                                    <p class="text-danger fw-bold">19 990,-</p>
-                                </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <p class="text-danger fw-bold m-0">19 990,-</p>
+                                        <button type="button"
+                                            class="btn btn-dark rounded-pill custom-hover px-3 py-2">Koupit
+                                            nyní</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </a>
