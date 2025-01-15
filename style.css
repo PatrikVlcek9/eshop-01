@@ -82,3 +82,101 @@ ul, li {
   .navbar-nav {
     width: 100%;
   }
+  .step-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    color: #6c757d; /* Šedá */
+  }
+
+  .step.active {
+    color: #000; /* Černá */
+    font-weight: bold;
+  }
+
+  .step.completed {
+    color: #198754; /* Zelená (Bootstrap Success) */
+  }
+
+  .step-circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #6c757d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  .step-circle.active {
+    border-color: #000; /* Černá */
+  }
+
+  .step-circle.completed {
+    background-color: #198754; /* Zelená */
+    border-color: #198754; /* Zelená */
+    color: white;
+  }
+
+  .step-line {
+    flex: 1;
+    height: 2px;
+    background-color: #6c757d; /* Šedá */
+  }
+
+  .step-line.completed {
+    background-color: #198754; /* Zelená */
+  }
+  .step-navigator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+
+  .step {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    flex: 1;
+  }
+
+  .step .line {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: calc(100% - 50px);
+    height: 4px;
+    background: #ddd;
+    transform: translateY(-50%) rotate(-45deg);
+    transform-origin: left;
+    z-index: -1;
+  }
+
+  .step.active .line,
+  .step:hover .line {
+    background: #007bff;
+  }
+
+  .step span {
+    position: relative;
+    font-weight: bold;
+    z-index: 1;
+  }
+
+  .step.active span {
+    color: #007bff;
+  }
+
+  .step:first-child .line {
+    display: none;
+  }
