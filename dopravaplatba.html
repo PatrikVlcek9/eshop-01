@@ -71,6 +71,12 @@
             flex-direction: column;
         }
 
+        .side-by-side {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
     </style>
 </head>
 <body>
@@ -133,7 +139,7 @@
         <!-- Payment Section -->
         <div class="payment-wrapper">
             <h2 class="mb-4">Platba</h2>
-            <div class="payment-section">
+            <div class="side-by-side">
                 <!-- Platba kartou -->
                 <div class="payment-card">
                     <h5 class="mb-4">Platební karta</h5>
@@ -166,7 +172,7 @@
                     </form>
                 </div>
 
-                <!-- Další platební metody -->
+                <!-- Další platební metody vedle -->
                 <div class="payment-methods">
                     <div class="list-group">
                         <label class="list-group-item d-flex align-items-center">
